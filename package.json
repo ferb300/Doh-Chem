@@ -1,0 +1,22 @@
+{
+  "name": "doh-chem",
+  "version": "1.0.0",
+  "description": "A simple web-based organic chemistry drawing tool",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ferb300/Doh-Chem.git"
+  },
+  "author": "ferb300",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/ferb300/Doh-Chem/issues"
+  },
+  "homepage": "https://github.com/ferb300/Doh-Chem#readme",
+  "dependencies": {
+    "bootstrap": "^4.6.0",
+    "p5": "^1.2.0"
+  }
+}
