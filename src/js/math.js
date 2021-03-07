@@ -1,0 +1,25 @@
+function degreesToRadians(deg) {
+    return deg * (Math.PI/180)
+}
+
+function calculateAdjacentOffset(l) {
+    return Math.cos(degreesToRadians(72)) * l
+}
+
+function calculateOppositeOffset(l) {
+    return Math.sin(degreesToRadians(72)) * l
+}
+
+function createPositionsArray(xo, yo, l) {
+    let xoff = calculateOppositeOffset(l)
+    let yoff = calculateAdjacentOffset(l)
+    return [
+        [xo, yo + l],
+        [xo + xoff, yo + yoff],
+        [xo + yoff, yo + xoff],
+        [xo + l, yo],
+        [xo + yoff, yo - xoff],
+        [xo + xoff, yo - yoff],
+        [xo, yo - l]
+    ]
+}

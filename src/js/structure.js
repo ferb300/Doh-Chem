@@ -1,0 +1,2 @@
+var prevX
+var prevY
