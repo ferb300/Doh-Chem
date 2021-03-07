@@ -15,11 +15,16 @@ function createPositionsArray(xo, yo, l) {
     let yoff = calculateAdjacentOffset(l)
     return [
         [xo, yo + l],
-        [xo + xoff, yo + yoff],
         [xo + yoff, yo + xoff],
+        [xo + xoff, yo + yoff],
         [xo + l, yo],
-        [xo + yoff, yo - xoff],
         [xo + xoff, yo - yoff],
-        [xo, yo - l]
+        [xo + yoff, yo - xoff],
+        [xo, yo - l],
+        [xo - yoff, yo - xoff],
+        [xo - xoff, yo - yoff],
+        [xo - l, yo],
+        [xo - xoff, yo + yoff],
+        [xo - yoff, yo + xoff]
     ]
 }
