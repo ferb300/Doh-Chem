@@ -19,10 +19,10 @@ function draw() {
     // Debug output
     strokeWeight(2)
     textSize(32)
-    text(`currentBond: ${currentBond}`, 0, 160)
-    text(`middleX: ${middleX}`, 0, 192)
-    text(`middleY: ${middleY}`, 0, 224)
-    text(`scaleFactor: ${scaleFactor}`, 0, 256)
+    text(`currentBond: ${currentBond}`, 10, 160)
+    text(`middleX: ${middleX}`, 10, 192)
+    text(`middleY: ${middleY}`, 10, 224)
+    text(`scaleFactor: ${scaleFactor}`, 10, 256)
 
     // Atom selection
     strokeWeight((currentCount + 4) * 2 * scaleFactor)
@@ -58,7 +58,3 @@ function drawStructure(atom, x, y) {
         }
     }
 }
-
-
-
-
