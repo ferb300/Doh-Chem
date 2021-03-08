@@ -10,7 +10,9 @@ class Atom {
     }
 
     bond(position, type, atom) {
-        this.bonds[position] = new Bond(this, atom, type)
+        let b = new Bond(this, atom, type)
+        this.bonds[position] = b
+        atom.bonds[(position + 6) % 12] = b
     }
 }
 
@@ -31,10 +33,12 @@ var para = new Atom("C")
 var antimeta = new Atom("C")
 var antiortho = new Atom("C")
 
-structure.bond(4, 1, ortho)
-ortho.bond(6, 1, meta)
-meta.bond(8, 1, para)
-para.bond(10, 1, antimeta)
-antimeta.bond(0, 1, antiortho)
-antiortho.bond(2, 1, structure)
+structure.bond(5, 1, ortho)
+ortho.bond(7, 1, meta)
+meta.bond(9, 1, para)
+para.bond(11, 1, antimeta)
+antimeta.bond(1, 1, antiortho)
+antiortho.bond(3, 1, structure)
+
+ortho.bond(3, 1, new Atom("C"))
 
