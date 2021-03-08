@@ -39,6 +39,10 @@ function keyDownDocument(e) {
 
 }
 
+function inputRangeScaleFactor(e) {
+    scaleFactor = document.getElementById("rangeScaleFactor").value / 10
+}
+
 function previousBond() {
     do {
         currentBond -= 1

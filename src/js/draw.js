@@ -7,6 +7,8 @@ function setup() {
         document.getElementById('canvas').offsetWidth,
         document.getElementById('canvas').offsetHeight,
     );
+    middleX = windowWidth / 2
+    middleY = windowHeight / 2
     canvas.parent('canvas');
     canvas.mouseClicked(mouseClickCanvas)
 }
@@ -17,9 +19,10 @@ function draw() {
     // Debug output
     strokeWeight(2)
     textSize(32)
-    text(`currentBond: ${currentBond}`, 0, 32)
-    text(`middleX: ${middleX}`, 0, 64)
-    text(`middleY: ${middleY}`, 0, 96)
+    text(`currentBond: ${currentBond}`, 0, 160)
+    text(`middleX: ${middleX}`, 0, 192)
+    text(`middleY: ${middleY}`, 0, 224)
+    text(`scaleFactor: ${scaleFactor}`, 0, 256)
 
     // Atom selection
     strokeWeight((currentCount + 4) * 2 * scaleFactor)
@@ -65,8 +68,12 @@ const sketch = function (p) {
     p.windowResized = windowResized;
 };
 
-//document event handlers
+//event handlers
 document.onload = function (e) {
     new p5(sketch, 'canvas');
+
+
 };
 document.onkeydown = keyDownDocument
+document.getElementById("rangeScaleFactor").addEventListener("input", inputRangeScaleFactor)
+feather.replace()

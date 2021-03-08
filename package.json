@@ -18,6 +18,7 @@
   "homepage": "https://github.com/ferb300/Doh-Chem#readme",
   "dependencies": {
     "bootstrap": "^4.6.0",
+    "feather-icons": "^4.28.0",
     "jquery": "^3.6.0",
     "p5": "^1.2.0"
   },

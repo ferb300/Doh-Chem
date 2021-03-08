@@ -10,14 +10,40 @@
 
     <link href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 
+    <script src="../../node_modules/feather-icons/dist/feather.min.js"></script>
     <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src='../../node_modules/p5/lib/p5.min.js'></script>
 </head>
 
 <body>
+
+    <!-- toolbox card -->
+    <div class="card fixed-top w-auto shadow m-5 bg-body rounded">
+        <div class="card-body">
+            
+        </div>
+    </div>
+
     <div id="canvas" class="vw-100 vh-100">
 
+    </div>
+
+    <!-- zoom card -->
+    <div class="card fixed-bottom w-25 shadow m-5 bg-body rounded">
+        <div class="card-body container">
+            <div class="row justify-content-md-center">
+                <div class="col col-sm-auto">
+                    <i data-feather="zoom-out"></i>
+                </div>
+                <div class="col">
+                    <input type="range" class="form-range w-100" min="1" max="100" value="100" id="rangeScaleFactor">
+                </div>
+                <div class="col col-sm-auto">
+                    <i data-feather="zoom-in"></i>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="../js/structure.js"></script>
