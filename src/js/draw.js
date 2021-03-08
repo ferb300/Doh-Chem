@@ -1,4 +1,5 @@
 let canvas;
+let visited = [];
 
 //p5 functions
 function setup() {
@@ -14,19 +15,38 @@ function draw() {
     background("white");
 
     //Debug output
+    strokeWeight(2)
     textSize(32)
-    text(`currPos: ${currentPosition}`, 0, 32)
+    text(`currentBond: ${currentBond}`, 0, 32)
     text(`clickX: ${clickX}`, 0, 64)
     text(`clickY: ${clickY}`, 0, 96)
 
+    /* Bond selection
+    strokeWeight((currentCount + 4) * 20)
+    stroke('rgba(255,0,0,0.25)');
+    line(clickX, clickY, pos[currentBond][0], pos[currentBond][1])*/
+
+    visited = [];
+    drawAtom(structure, clickX, clickY)
+}
+
+function drawAtom(atom, x, y) {
+    if (!atom || visited.includes(atom)) return // make sure atom exists and hasnt been visited
+    visited.push(atom) // add atom to visited atoms
+
+    let pos = createPositionsArray(x, y, (currentCount + 4) * 80) //calculate all the positions around the atom
+    
     stroke(0);
-    strokeWeight(2)
-    let pos = createPositionsArray(clickX, clickY, 100)
-    pos.forEach(coord => {
-        line(clickX, clickY, coord[0], coord[1])
-    })
-    stroke("red")
-    line(clickX, clickY, pos[currentPosition][0], pos[currentPosition][1])
+    strokeWeight((currentCount + 4) * 5)
+
+    // go through all the bonds, if they exist draw them and make the recursive call
+    for (let index = 0; index < atom.bonds.length; index++) {
+        const bond = atom.bonds[index];
+        if (bond && bond.type > 0) {
+            line(x, y, pos[index][0], pos[index][1])
+            drawAtom(bond.atom2, pos[index][0], pos[index][1])
+        }
+    }
 }
 
 function windowResized() {
