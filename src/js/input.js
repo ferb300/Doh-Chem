@@ -1,5 +1,7 @@
 var middleX
 var middleY
+var mousePrevX
+var mousePrevY
 var scaleFactor = 10
 var currentBond = 1;
 var currentAtom = structure;

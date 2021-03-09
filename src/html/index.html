@@ -19,11 +19,32 @@
 
 <body>
 
-    <!-- toolbox card -->
-    <div class="card fixed-top w-auto shadow m-5 bg-body rounded">
-        <div class="card-body">
+    <!-- top bereich -->
+    <div class="fixed-top w-100 container-fluid">
+        <div class="row justify-content-start w-100">
+
+            <!-- toolbox card -->
+            <div class="card col-auto shadow m-5 bg-body rounded">
+                <div class="card-body container">
+                    <div class="row justify-content-md-center">
+                        <div class="col col-sm-auto">
+                            <i data-feather="plus-circle"></i>
+                            <a href="#" class="stretched-link" id="btnPlus"></a>
+                        </div>
+                        <div class="col col-sm-auto">
+                            <i data-feather="navigation"></i>
+                            <a href="#" class="stretched-link" id="select"></a>
+                        </div>
+                        <div class="col col-sm-auto">
+                            <i data-feather="eye"></i>
+                            <a href="#" class="stretched-link" id="btnEye"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    
 
     <div id="canvas" class="vw-100 vh-100">
 
@@ -70,7 +91,8 @@
                         <div class="col col-sm-auto">
                             <i id="icnMaximize" data-feather="maximize"></i>
                             <i id="icnMinimize" class="d-none" data-feather="minimize"></i>
-                            <a href="#" class="stretched-link" id="btnToggleFullscreen" onclick="screenfull.toggle();"></a>
+                            <a href="#" class="stretched-link" id="btnToggleFullscreen"
+                                onclick="screenfull.toggle();"></a>
                         </div>
                     </div>
                 </div>

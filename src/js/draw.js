@@ -16,6 +16,17 @@ function setup() {
 function draw() {
     background("white");
 
+    //canvas dragging
+    if (mouseIsPressed) {
+        cursor("grab")
+        middleX = middleX + (mouseX - mousePrevX)
+        middleY = middleY + (mouseY - mousePrevY)
+    } else {
+        cursor()
+    }
+    mousePrevX = mouseX
+    mousePrevY = mouseY
+
     // Debug output
     strokeWeight(2)
     textSize(32)
