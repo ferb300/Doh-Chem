@@ -17,10 +17,11 @@
   },
   "homepage": "https://github.com/ferb300/Doh-Chem#readme",
   "dependencies": {
-    "bootstrap": "^4.6.0",
+    "bootstrap": "^5.0.0-beta2",
     "feather-icons": "^4.28.0",
     "jquery": "^3.6.0",
-    "p5": "^1.2.0"
+    "p5": "^1.2.0",
+    "screenfull": "^5.1.0"
   },
   "devDependencies": {
     "eslint": "^7.21.0",

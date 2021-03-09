@@ -11,6 +11,7 @@
     <link href="../../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 
     <script src="../../node_modules/feather-icons/dist/feather.min.js"></script>
+    <script src="../../node_modules/screenfull/dist/screenfull.js"></script>
     <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src='../../node_modules/p5/lib/p5.min.js'></script>
@@ -28,18 +29,50 @@
 
     </div>
 
-    <!-- zoom card -->
-    <div class="card fixed-bottom w-25 shadow m-5 bg-body rounded">
-        <div class="card-body container">
-            <div class="row justify-content-md-center">
-                <div class="col col-sm-auto">
-                    <i data-feather="zoom-out"></i>
+    <!-- Bottom bereich -->
+    <div class="fixed-bottom w-100 container-fluid">
+        <div class="row justify-content-between w-100">
+
+            <!-- zoom card -->
+            <div class="card col-4 shadow m-5 bg-body rounded">
+                <div class="card-body container">
+                    <div class="row justify-content-md-center">
+                        <div class="col col-sm-auto">
+                            <i data-feather="zoom-out"></i>
+                        </div>
+                        <div class="col">
+                            <input type="range" class="form-range w-100" min="1" max="100" value="100"
+                                id="rangeScaleFactor">
+                        </div>
+                        <div class="col col-sm-auto">
+                            <i data-feather="zoom-in"></i>
+                        </div>
+                    </div>
                 </div>
-                <div class="col">
-                    <input type="range" class="form-range w-100" min="1" max="100" value="100" id="rangeScaleFactor">
-                </div>
-                <div class="col col-sm-auto">
-                    <i data-feather="zoom-in"></i>
+            </div>
+
+            <!-- other card -->
+            <div class="card col-auto shadow m-5 bg-body rounded">
+                <div class="card-body container">
+                    <div class="row justify-content-md-center">
+                        <div class="col col-sm-auto">
+                            <i data-feather="download"></i>
+                            <a href="#" class="stretched-link" id="btnDownload"></a>
+                        </div>
+                        <div class="col col-sm-auto">
+                            <i data-feather="help-circle"></i>
+                            <a href="#" class="stretched-link" id="btnHelp"></a>
+                        </div>
+                        <div class="col col-sm-auto">
+                            <i data-feather="info"></i>
+                            <a href="#" class="stretched-link" id="btnInfo"></a>
+                        </div>
+                        <div class="col col-sm-auto">
+                            <i id="icnMaximize" data-feather="maximize"></i>
+                            <i id="icnMinimize" class="d-none" data-feather="minimize"></i>
+                            <a href="#" class="stretched-link" id="btnToggleFullscreen" onclick="screenfull.toggle();"></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
