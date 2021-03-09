@@ -7,25 +7,21 @@ const sketch = function (p) {
     p.windowResized = windowResized;
 };
 
-//event handler assignment
-document.onload = function (e) {
-    new p5(sketch, 'canvas');
 
-
-};
+//add event handlers
 document.onkeydown = keyDownDocument
 document.getElementById("rangeScaleFactor").addEventListener("input", inputRangeScaleFactor)
 document.getElementById("btnDownload").addEventListener("click", clickBtnDownload)
 document.getElementById("btnHelp").addEventListener("click", clickBtnHelp)
 document.getElementById("btnInfo").addEventListener("click", clickBtnInfo)
 if (screenfull.isEnabled) {
-	screenfull.on('change', fullscreenChanged);
+    screenfull.on('change', fullscreenChanged);
 }
 
 // UI events
 function fullscreenChanged() {
     //switch icon on fullscreen switch
-    if(screenfull.isFullscreen) {
+    if (screenfull.isFullscreen) {
         $("#icnMaximize").addClass("d-none")
         $("#icnMinimize").removeClass("d-none")
     } else {
@@ -43,11 +39,11 @@ function clickBtnDownload(e) {
 }
 
 function clickBtnHelp(e) {
-    
+
 }
 
 function clickBtnInfo(e) {
-    
+
 }
 
 
