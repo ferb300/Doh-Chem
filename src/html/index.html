@@ -14,6 +14,7 @@
     <script src="../../node_modules/screenfull/dist/screenfull.js"></script>
     <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../node_modules/downloadjs/download.min.js"></script>
     <script src='../../node_modules/p5/lib/p5.min.js'></script>
 </head>
 
@@ -97,9 +98,15 @@
                 <div class="card-body container">
                     <div class="row justify-content-md-center">
                         <div class="col col-sm-auto">
-                            <a href="#" class="link-dark" id="btnDownload">
-                                <i data-feather="download"></i>
-                            </a>
+                            <div class="dropstart">
+                                <a href="#" class="link-dark" data-bs-toggle="dropdown">
+                                    <i data-feather="download"></i>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#" id="btnExportPng"><i data-feather="image"></i> Export PNG</a></li>
+                                    <li><a class="dropdown-item" href="#" id="btnExportJson"><i data-feather="file-text"></i>  Export JSON</a></li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="col col-sm-auto">
                             <a href="#" class="link-dark" id="btnHelp">

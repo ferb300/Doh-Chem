@@ -11,7 +11,8 @@ const sketch = function (p) {
 //add event handlers
 document.onkeydown = keyDownDocument
 $("#rangeScaleFactor").on("input",inputRangeScaleFactor)
-$("#btnDownload").click(clickBtnDownload)
+$("#btnExportPng").click(clickBtnExportPng)
+$("#btnExportJson").click(clickBtnExportJson)
 $("#btnHelp").click(clickBtnHelp)
 $("#btnInfo").click(clickBtnInfo)
 if (screenfull.isEnabled) {
@@ -34,8 +35,13 @@ function inputRangeScaleFactor(e) {
     scaleFactor = document.getElementById("rangeScaleFactor").value / 10
 }
 
-function clickBtnDownload(e) {
+function clickBtnExportPng(e) {
     saveCanvas("structure", "png")
+}
+
+function clickBtnExportJson(e) {
+    let json = JSON.stringify(structure)
+    download(json, "structure.json", "application/json");
 }
 
 function clickBtnHelp(e) {
