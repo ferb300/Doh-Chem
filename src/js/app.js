@@ -10,7 +10,7 @@ const sketch = function (p) {
 
 //add event handlers
 document.onkeydown = keyDownDocument
-$("#rangeScaleFactor").click(inputRangeScaleFactor)
+$("#rangeScaleFactor").on("input",inputRangeScaleFactor)
 $("#btnDownload").click(clickBtnDownload)
 $("#btnHelp").click(clickBtnHelp)
 $("#btnInfo").click(clickBtnInfo)
