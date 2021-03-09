@@ -10,10 +10,10 @@ const sketch = function (p) {
 
 //add event handlers
 document.onkeydown = keyDownDocument
-document.getElementById("rangeScaleFactor").addEventListener("input", inputRangeScaleFactor)
-document.getElementById("btnDownload").addEventListener("click", clickBtnDownload)
-document.getElementById("btnHelp").addEventListener("click", clickBtnHelp)
-document.getElementById("btnInfo").addEventListener("click", clickBtnInfo)
+$("#rangeScaleFactor").click(inputRangeScaleFactor)
+$("#btnDownload").click(clickBtnDownload)
+$("#btnHelp").click(clickBtnHelp)
+$("#btnInfo").click(clickBtnInfo)
 if (screenfull.isEnabled) {
     screenfull.on('change', fullscreenChanged);
 }
@@ -35,7 +35,7 @@ function inputRangeScaleFactor(e) {
 }
 
 function clickBtnDownload(e) {
-
+    saveCanvas("structure", "png")
 }
 
 function clickBtnHelp(e) {

@@ -19,6 +19,23 @@
 
 <body>
 
+    <!-- Info Modal -->
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Doh!Chem 0.0.1</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    designed and developed by <b>ferb300</b><br>
+                    published under the <b>General Public License v3</b><br>
+                    GitHub: <a href="https://github.com/ferb300/Doh-Chem">github.com/ferb300/Doh-Chem</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- top bereich -->
     <div class="fixed-top w-100 container-fluid">
         <div class="row justify-content-start w-100">
@@ -90,7 +107,7 @@
                             </a>
                         </div>
                         <div class="col col-sm-auto">
-                            <a href="#" class="link-dark" id="btnInfo">
+                            <a href="#" class="link-dark" id="btnInfo" data-bs-toggle="modal" data-bs-target="#infoModal">
                                 <i data-feather="info"></i>
                             </a>
                         </div>
