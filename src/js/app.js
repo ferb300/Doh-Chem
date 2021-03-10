@@ -1,20 +1,5 @@
-
-
-//p5 init
-const sketch = function (p) {
-    p.setup = setup;
-    p.draw = draw;
-    p.windowResized = windowResized;
-};
-
-
 //add event handlers
 document.onkeydown = keyDownDocument
-$("#rangeScaleFactor").on("input",inputRangeScaleFactor)
-$("#btnExportPng").click(clickBtnExportPng)
-$("#btnExportJson").click(clickBtnExportJson)
-$("#btnHelp").click(clickBtnHelp)
-$("#btnInfo").click(clickBtnInfo)
 if (screenfull.isEnabled) {
     screenfull.on('change', fullscreenChanged);
 }
@@ -31,29 +16,31 @@ function fullscreenChanged() {
     }
 }
 
-function inputRangeScaleFactor(e) {
-    scaleFactor = document.getElementById("rangeScaleFactor").value / 10
+function inputRangeScaleFactor(value) {
+    scaleFactor = value / 10
 }
 
-function clickBtnExportPng(e) {
+function clickBtnExportPng() {
     saveCanvas("structure", "png")
 }
 
-function clickBtnExportJson(e) {
+function clickBtnExportJson() {
     let json = JSON.stringify(structure)
     download(json, "structure.json", "application/json");
 }
 
-function clickBtnHelp(e) {
+function clickBtnHelp() {
 
 }
 
-function clickBtnInfo(e) {
-
+function clickBtnPlus() {
+    console.log("btn plus")
 }
 
+function clickBtnNav() {
+    console.log("btn nav")
+}
 
-//icon replacing
-feather.replace()
-
-//ui
+function clickBtnEye() {
+    console.log("btn eye")
+}

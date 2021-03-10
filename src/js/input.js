@@ -71,5 +71,12 @@ function nextAtom() {
 }
 
 function previousAtom() {
-
+    if (currentAtom.bonds[(currentBond + 6) % 12] && currentAtom == currentAtom.bonds[(currentBond + 6) % 12].atom1) {
+        currentAtom = currentAtom.bonds[(currentBond + 6) % 12].atom2
+    } else if (currentAtom.bonds[(currentBond + 6) % 12]) {
+        currentAtom = currentAtom.bonds[(currentBond + 6) % 12].atom1
+    }
+    if (bondMode == "existing") {
+        nextBond()
+    }
 }

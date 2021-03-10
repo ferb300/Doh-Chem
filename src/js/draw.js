@@ -1,7 +1,6 @@
 let canvas;
 let visited = [];
 
-//p5 functions
 function setup() {
     canvas = createCanvas(
         document.getElementById('canvas').offsetWidth,
@@ -48,6 +47,7 @@ function draw() {
     drawStructure(currentAtom, middleX, middleY)
 }
 
+//depth first search for drawing the structure
 function drawStructure(atom, x, y) {
     if (!atom || visited.includes(atom)) return // make sure atom exists and hasnt been visited
     visited.push(atom) // add atom to visited atoms
