@@ -90,50 +90,6 @@
             </script>
 
             <!-- other card -->
-            <div class="card col-auto shadow m-5 bg-body rounded">
-                <div class="card-body container">
-                    <div class="row justify-content-md-center">
-                        <div class="col col-sm-auto">
-                            <div class="dropstart">
-                                <a href="#" class="link-dark" data-bs-toggle="dropdown">
-                                    <i data-feather="download"></i>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#" id="btnExportPng"
-                                            onclick="clickBtnExportPng()"><i data-feather="image"></i> Export PNG</a>
-                                    </li>
-                                    <li><a class="dropdown-item" href="#" id="btnExportJson"
-                                            onclick="clickBtnExportJson()"><i data-feather="file-text"></i> Export
-                                            JSON</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col col-sm-auto">
-                            <a href="#" class="link-dark" id="btnUpload">
-                                <i data-feather="upload"></i>
-                            </a>
-                        </div>
-                        <div class="col col-sm-auto">
-                            <a href="#" class="link-dark" id="btnHelp" onclick="clickBtnHelp()">
-                                <i data-feather="help-circle"></i>
-                            </a>
-                        </div>
-                        <div class="col col-sm-auto">
-                            <a href="#" class="link-dark" id="btnInfo" data-bs-toggle="modal"
-                                data-bs-target="#infoModal">
-                                <i data-feather="info"></i>
-                            </a>
-                        </div>
-                        <div class="col col-sm-auto">
-                            <a href="#" class="link-dark" id="btnToggleFullscreen" onclick="screenfull.toggle();">
-                                <i id="icnMaximize" data-feather="maximize"></i>
-                                <i id="icnMinimize" class="d-none" data-feather="minimize"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <script>
                 document.write(cardbox("auto", [
                     cardboxDropdown("download", [
@@ -146,6 +102,7 @@
                     "<div class=\"col col-sm-auto\"><a href=\"#\" class=\"link-dark\" id=\"btnToggleFullscreen\" onclick=\"screenfull.toggle();\"><i id=\"icnMaximize\" data-feather=\"maximize\"></i><i id=\"icnMinimize\" class=\"d-none\" data-feather=\"minimize\"></i></a></div>"
                 ]))
             </script>
+
         </div>
     </div>
 
